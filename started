@@ -47,3 +47,33 @@ func1(a:number,b:number)
    return a + b;
 }
 {{ func1(3,4) }}
+
+
+Passing Inputs : Project Name => Angular_Passing_Inputs
+addr.component.ts
+@Input('title') userTitle : string
+
+app.component.html
+<app-addr title='The Foo Bar Company'></app-addr> >> Initilize the object of AddrComponent class
+@Input('title') userTitle : string
+
+
+We can't initilize in constructor when we are passing the inputs like this :
+<app-addr title='The Foo Bar Company'></app-addr>
+Angualr wouldn't get the chance to initilize the value at the same time when creting the object. 
+For this purpose we use life cycle hook methods.
+
+Life Cycle Hook :
+
+ngOnChanges(){}
+When Angular set/reset data bound input properties. Called before ngOnInIt()
+
+When the component is fully initialized, When Angular displays data bound input properties.
+ngOnInit(){}
+
+
+ngOnDestroy(): CleanUp Code before component is destroyerd
+
+ngAfterContenntChecked()
+ngAfterViewChecked()
+ngAfterViewInIt()
