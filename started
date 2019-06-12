@@ -77,3 +77,58 @@ ngOnDestroy(): CleanUp Code before component is destroyerd
 ngAfterContenntChecked()
 ngAfterViewChecked()
 ngAfterViewInIt()
+
+OnInIt interface >> has to override ngOnInIt() method
+
+
+Example :
+
+export class AddrComponent implements OnInit {
+
+  @Input('user') user : User
+  @Input('title') userTitle : string
+  constructor() { 
+
+  }
+
+  ngOnInit() {
+    
+  }
+}     
+
+model :
+
+export class User {
+    title : string;
+    designation : string;
+    address : string;
+    phone : string[];
+}
+
+
+app.component.ts
+
+import { Component } from '@angular/core';
+import { User } from './addr/addr.model';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'third-project';
+
+
+  user : User
+  constructor(){
+      
+    this.user  = new User();
+    this.user.title =  "The Foo Company";
+    this.user.address = "221 NJ"
+    this.user.phone = ['233-23-3','2332-23-22']
+    }
+}
+
+
+<app-addr [user]='user'></app-addr>. >> user is the member variable, used with @Input()
