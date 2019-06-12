@@ -1,3 +1,37 @@
+Angular is based on Component based approach to develop web application. The very first thing that you need to think while creating web application is : 
+
+What are the components that you need to build ?
+
+Like Header component, Body component , Side Bar Component , Footer Component 
+Component : Self sufficient entity that knows how to render itself
+
+You will not be thinking about HTML and JS , but about components.
+
+Components can have sub components.
+Commands :
+
+>>node -v
+
+Package manager for node :
+
+>>npm -v 
+
+>>npm install @angular/cli -g
+
+Ng is the command to run Angular CLI
+
+>>ng new first-project
+
+node_modules : contains downloaded dependencies
+package.json : list all third party dependencies that we need
+
+
+>> ng serve (to run the project) will create local development server
+
+>>ng generate component component-name
+
+Annotation is TS way of adding meta data to classes
+
 Create a Date Component and get Current Date and Time reflected on it. It should be updated every second.
 
 {{ }} >> Known as String Interpolation, Expression Interpolation. It looks at the content , not as static text
