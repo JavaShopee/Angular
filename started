@@ -1,0 +1,15 @@
+Create a Date Component and get Current Date and Time reflected on it. It should be updated every second.
+
+{{ }} >> Known as String Interpolation, Expression Interpolation. It looks at the content , not as static text
+but some thing that needs to be evaluated. 
+
+Angular enters into evaluation mode.{{ 1+1 }}. Not just referring to Member variable, it's doing evaluation.
+{{ somevariable + 1 }} >> Mixup
+{{ someFunction(1,2) }}
+{{ someFunction(someNumber,2) }}
+
+func1(a:number,b:number)
+{
+   return a + b;
+}
+{{ func1(3,4) }}
