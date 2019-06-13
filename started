@@ -188,3 +188,21 @@ imports: [
     AppRoutingModule,
     FormsModule
   ]
+
+
+
+*******************************************************************************************
+
+generate a new module : ng generate module view
+generate a new component inside the module : ng generate component view/viewc
+
+1. view module has to export viewc
+2. app module has to import view module 
+
+in order to use view mdule inside app module
+
+
+***********************************************************************************************
+
+
+view module has to export 
