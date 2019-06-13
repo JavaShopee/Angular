@@ -201,6 +201,9 @@ generate a new component inside the module : ng generate component view/viewc
 
 in order to use view mdule inside app module
 
-
 ***********************************************************************************************
 
+Annotations in Angular
+@NgModule  >> Class is a module
+@Injectable >> Class is a service
+@Component >> Class is a component
