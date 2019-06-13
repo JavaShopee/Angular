@@ -143,3 +143,31 @@ addr.component.html
 </div>
 
 <app-addr [user]='user'></app-addr>. >> user is the member variable, used with @Input()
+
+
+Two Way Data Binding in Angular :
+<input type="text" [(ngModule)]="sampelStr"/>{{sampelStr}}
+
+() > Data flow from view to component
+[] > Data flow from component to view
+
+ngModule is the directive that enables two way data binding in angular
+
+Also make sure to import FormsModule form @angular/forms
+
+import { FormsModule } from '@angular/forms';
+@NgModule({
+  declarations: [
+    AppComponent,
+    AddrComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+
+
