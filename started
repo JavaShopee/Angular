@@ -171,3 +171,20 @@ import { FormsModule } from '@angular/forms';
 })
 
 
+
+TypeScript Import Vs Angular Import :
+
+
+TS Import :
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
+
+Angular Import :
+
+imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule
+  ]
