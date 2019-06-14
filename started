@@ -219,6 +219,10 @@ imports >> for other modules
 ****Services gonna have methodes,we can make use of service methods inside app.component.ts****    
 ***********************************************************************************************
 
+How to use service methods ?
+1. Use Injectable
+2. Create constructor args with private member variables. 
+
 
 
 
