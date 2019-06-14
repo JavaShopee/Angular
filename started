@@ -223,6 +223,14 @@ How to use service methods ?
 1. Use Injectable
 2. Create constructor args with private member variables. 
 
+export class AppComponent 
+{
+  constructor(private svc:TestService)
+  {
+    svc.prinToConsole()
+  }
+}
+
 
 
 
