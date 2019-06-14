@@ -199,7 +199,7 @@ generate a new component inside the module : ng generate component view/viewc
 1. view module has to export viewc
 2. app module has to import view module 
 
-in order to use view mdule inside app module
+in order to use view module inside app module
 
 ***********************************************************************************************
 
@@ -207,3 +207,18 @@ Annotations in Angular
 @NgModule  >> Class is a module
 @Injectable >> Class is a service
 @Component >> Class is a component
+
+***********************************************************************************************
+
+@NgModule Annotation structure :
+decleartation >> for Components
+providers >> for Service
+imports >> for other modules
+
+***********************************************************************************************
+****Services gonna have methodes,we can make use of service methods inside app.component.ts****    
+***********************************************************************************************
+
+
+
+
