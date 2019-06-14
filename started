@@ -232,5 +232,8 @@ export class AppComponent
 }
 
 
+********************************************************************************************************
+Services are not restricted to module they are declared in. Angular creates the common shared 
+space for shared service.
 
-
+In contrast to components, owning module need to  export the component and other module need to import the same compnent.
