@@ -266,3 +266,41 @@ export class AppComponent {
 }
 
 
+***Rest Response 2 way data binding*****
+
+
+export class TestComponent implements OnInit {
+
+  userName : string
+  response : any
+  constructor(private http : HttpClient) 
+  { 
+     
+  }
+  
+  ngOnInit() 
+  {
+
+  }
+  search()
+  {
+    let obs = this.http.get("https://api.github.com/users/" + this.userName);
+    obs.subscribe((response) => 
+    this.response = response)
+  }
+}
+
+
+
+<input type="text" [(ngModel)]="userName" />
+<button (click)="search()">Click</button>
+<div *ngIf="response">
+
+{{response.login}}
+{{response.login}}
+{{response.login}}
+{{response.login}}
+{{response.login}}
+
+</div>
+
