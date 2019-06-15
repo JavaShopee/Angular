@@ -237,3 +237,36 @@ Services are not restricted to module they are declared in. Angular creates the 
 space for shared service.
 
 In contrast to components, owning module need to  export the component and other module need to import the same compnent.
+
+Shared Service Space is referred to as Dependency Injection Context.This is the list of services that are available to all the 
+components in your module.
+
+Why does it matter which module the service is declared in?
+
+Angular supports the concept of lazily loading which effects how this service injection context works.
+There is another way of importing module which is lazily loading them in that scnerio you end up with multilpe such injection 
+context. In that case we have to be careful which module the service is declared in.
+
+
+Making REST calls with HttpClient
+
+Module in app.component.module : HttpClientModule
+Service Method Name :  HttpClient
+
+app.component.ts 
+
+export class AppComponent {
+  
+  constructor(private http: HttpClient)
+  {
+
+  }
+
+  ngOnInit()
+  {
+      let obs = this.http.get("https://api.github.com/users/javashopee");
+      obs.subscribe((response) => console.log(response))
+  }
+}
+
+
