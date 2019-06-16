@@ -345,3 +345,41 @@ export const routes: Routes = [
   { path: '**', component: PageNotFoundComponent}
  ];
 
+
+
+Single Page App
+1st Way :
+app.component.html >>
+<a routerLink="home">Home</a>
+<a routerLink="settings">Settings</a>
+
+
+2nd Way :
+app.component.ts
+
+export class AppComponent {
+  title = 'routing-intro';
+  homeRoute = 'home'
+  settingRoute = 'settings' 
+}
+
+app.component.html:
+routerLink directive
+<a [routerLink]="homeRoute">Home</a>
+<a [routerLink]="settingRoute">Settings</a>
+<router-outlet></router-outlet>
+
+3rd Way
+
+export class AppComponent {
+  title = 'routing-intro';
+  
+  routes = [
+    {linkName : 'Home' , url: 'home'},
+    {linkName : 'Settings' , url: 'settings'}
+  ]
+}
+
+
+
+<router-outlet></router-outlet>
