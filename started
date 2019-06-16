@@ -304,3 +304,10 @@ export class TestComponent implements OnInit {
 
 </div>
 
+Each time we run ng serve , there are number of JS files loaded:
+vendor.js, runtime.js, styles.js,runtime.js
+
+ ng build >> generate dist/build-proj that can be dployed on CDN
+ npm insatll http-server -g >> host a dir on your maching as if it's hosed on CDN and acess it locally
+ http-server dist/build-proj
+
