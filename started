@@ -324,10 +324,24 @@ vendor.js, runtime.js, styles.js,runtime.js
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { SettingsComponent } from './settings/settings.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SettingsProfilesComponent } from './settings-profiles/settings-profiles.component';
+import { SettingsContactsComponent } from './settings-contacts/settings-contacts.component';
 
 export const routes: Routes = [
   { path: '', redirectTo:'/home', pathMatch:'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'settings', component: SettingsComponent },
+  { 
+    path: 'settings', 
+    component: SettingsComponent,
+    children:[
+      { path: '', redirectTo:'profiles', pathMatch:'full'  },
+      { path: 'profiles', component: SettingsProfilesComponent },
+      { path: 'contacts', component: SettingsContactsComponent },
+      { path: '**', component: PageNotFoundComponent}
+    ]
+    
+  },
   { path: '**', component: PageNotFoundComponent}
  ];
+
