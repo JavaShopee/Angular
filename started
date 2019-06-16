@@ -307,7 +307,16 @@ export class TestComponent implements OnInit {
 Each time we run ng serve , there are number of JS files loaded:
 vendor.js, runtime.js, styles.js,runtime.js
 
- ng build >> generate dist/build-proj that can be dployed on CDN
+ ng build >> generate dist/proj-name that can be dployed on CDN
  npm insatll http-server -g >> host a dir on your maching as if it's hosed on CDN and acess it locally
  http-server dist/build-proj
+ 
+ This will eliminate the use of "ng" but again the process will generate all above files again :
+ vendor.js, runtime.js, styles.js,runtime.js
+ 
+ ng build --prod >> prd build, Ahead of time compilation (optimization of Angular Code)
+ Angular templating is precompiled
+ Content smaller, Performance Improved
+ 
+ This will generate hash value in front of file name.
 
