@@ -1,0 +1,27 @@
+Single Page App : Part of the view get refreshed asynchronously without having to reload the entrie page.
+
+Features : 
+1. Modular approach
+2. Re-usable code 
+3. Developement quicker and easier
+4. Unit Testable
+5. Google + Microsoft(TypeScript)
+
+
+2010 >> Angular JS >> First Version on Angular version 1.x
+2016 >> Angular version 2
+Misalignment of routers package distribution >> Angular version 3
+2016 Dec >> Angular version 4
+Nov 2017 >> Angular 5
+May 2018 >> Angular 6
+Oct 2018 >> Angular 7
+May 2019 >> Angular 8
+
+
+Goolge team has decided we will update twice a year and stick to Semantic Versionising
+
+Version 1.2.3. major.minor.Fix(Patch)
+
+Fix >> CHANGES When there is a bug fixed
+minor >> CHANGES When new features got added without impacting existing features
+major >> CHANGES When there is a break in any of the functionality
