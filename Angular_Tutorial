@@ -25,3 +25,11 @@ Version 1.2.3. major.minor.Fix(Patch)
 Fix >> CHANGES When there is a bug fixed
 minor >> CHANGES When new features got added without impacting existing features
 major >> CHANGES When there is a break in any of the functionality
+
+Check Angular CLI installation :
+>> ng -v
+
+
+Entry Point to Angular App >> main.ts
+
+ng serve >>  main.ts >> bootstrap app module >> bootstrap app component
